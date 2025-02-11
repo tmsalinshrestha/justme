@@ -69,7 +69,7 @@ export default function Home() {
           👀 More coming soon. Stay tuned. 
           <br></br>!!!EXPERIMENTAL PAGE!!!
         </p>
-        <p className="text-white text-[10px]"> 
+        <p className="text-white text-[16px]"> 
           &copy; 2025 Salin Shrestha (@tmsalinshrestha). All rights reserved.
         </p>
       </div>
