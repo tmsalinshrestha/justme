@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import { useEffect } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,7 +12,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export default function Home() {
+  useEffect(() => {
+    let scrollY = window.scrollY;
+    let targetY = window.scrollY;
+    const ease = 0.1; // Adjust for smoothness
+
+    const updateScroll = () => {
+      scrollY += (targetY - scrollY) * ease;
+      window.scrollTo(0, scrollY);
+      requestAnimationFrame(updateScroll);
+    };
+
+    const handleScroll = (event) => {
+      event.preventDefault(); // Stop default scroll
+      targetY += event.deltaY * 0.8; // Adjust speed here
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    requestAnimationFrame(updateScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-8 relative">
       {/* Glow effect background */}
@@ -29,7 +55,7 @@ export default function Home() {
         {/* Bio */}
         <p className="text-lg md:text-xl text-gray-400 leading-relaxed mx-auto">
           Born from lines of code, raised by algorithms, and destined to shape the digital world. 
-          A programmer who doesn’t just write code but **weaves digital spells**. 🚀
+          A programmer who doesn’t just write code but <b>weaves digital spells</b>. 🚀
         </p>
 
         {/* Sections Grid */}
@@ -69,10 +95,11 @@ export default function Home() {
           👀 More coming soon. Stay tuned. 
           <br></br>!!!EXPERIMENTAL PAGE!!!
         </p>
-        <p className="text-white text-[16px]"> 
+        <p className="text-white text-[15px]"> 
           &copy; 2025 Salin Shrestha (@tmsalinshrestha). All rights reserved.
         </p>
       </div>
     </div>
   );
 }
+
