@@ -24,7 +24,7 @@ export default function Home() {
           <h1 className="text-5xl py-8 md:text-6xl font-extrabold text-blue-400 drop-shadow-lg animate-pulse">
             Salin Shrestha 👾
           </h1>
-          <h2 className="text-lg md:text-xl text-gray-300 underline decoration-indigo-800 underline-offset-8">@tmsalinshrestha</h2>
+          <h2 className="text-lg md:text-xl text-gray-300 underline decoration-indigo-800 decoration-4 underline-offset-8">@tmsalinshrestha</h2>
         </div>
 
         {/* Bio */}
