@@ -36,7 +36,7 @@ export default function Home() {
         {/* Sections Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {/* Facts */}
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700">
+          <div className="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
             <h3 className="text-2xl font-semibold text-blue-300 mb-3"> Unexpected Facts </h3>
             <ul className="space-y-2 text-gray-300 text-lg text-left">
               <li>💡 Once tried to hack into my own brain. Results pending. 🧠</li>
@@ -46,7 +46,7 @@ export default function Home() {
           </div>
 
           {/* Hobbies */}
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700">
+          <div className="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700">
             <h3 className="text-2xl font-semibold text-blue-300 mb-3"> Hobbies & Interests</h3>
             <ul className="space-y-2 text-gray-300 text-lg text-left">
               <li>🎯 Coding till my fingers refuse to type.</li>
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
 
           {/* Past - Full Width */}
-          <div className="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 col-span-1 md:col-span-2">
+          <div className="bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700 col-span-1 md:col-span-2">
             <h3 className="text-2xl font-semibold text-blue-300 mb-3">⏳ The Past</h3>
             <p className="italic text-gray-400">
               Legend has it that Salin was once a mere mortal, until a JavaScript function rewrote his destiny.
