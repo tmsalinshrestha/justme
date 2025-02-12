@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-8 relative">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 text-white px-8 relative overflow-y-auto">
       {/* Glow effect background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 opacity-20 blur-3xl"></div>
 
