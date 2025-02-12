@@ -95,8 +95,8 @@ export default function Home() {
           👀 More coming soon. Stay tuned. 
           <br></br>!!!EXPERIMENTAL PAGE!!!
         </p>
-        <p className="text-white text-[15px]"> 
-          &copy; 2025 Salin Shrestha (@tmsalinshrestha). All rights reserved.
+        <p className="text-gray-400 text-sm mt-8 border-t border-gray-700 pt-4 pb-4 tracking-widest uppercase">
+          &copy; {new Date().getFullYear()} <span className="text-blue-400 font-semibold">Salin Shrestha</span> (@tmsalinshrestha) • All Rights Reserved.
         </p>
       </div>
     </div>
