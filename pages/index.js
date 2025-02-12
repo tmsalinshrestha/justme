@@ -14,36 +14,12 @@ const geistMono = Geist_Mono({
 
 
 export default function Home() {
-  useEffect(() => {
-    let scrollY = window.scrollY;
-    let targetY = window.scrollY;
-    const ease = 0.1; // Adjust for smoothness
-
-    const updateScroll = () => {
-      scrollY += (targetY - scrollY) * ease;
-      window.scrollTo(0, scrollY);
-      requestAnimationFrame(updateScroll);
-    };
-
-    const handleScroll = (event) => {
-      event.preventDefault(); // Stop default scroll
-      targetY += event.deltaY * 0.8; // Adjust speed here
-    };
-
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    requestAnimationFrame(updateScroll);
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 text-white px-8 relative overflow-y-auto">
-      {/* Glow effect background */}
+      {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 opacity-20 blur-3xl"></div>
 
-      <div className="relative z-10 text-center max-w-4xl w-full space-y-8">
+      <div className="relative z-10 text-center max-w-4xl w-full space-y-8 pb-20">
         {/* Title Section */}
         <div className="space-y-0">
           <h1 className="text-5xl py-8 md:text-6xl font-extrabold text-blue-400 drop-shadow-lg animate-pulse">
@@ -54,8 +30,8 @@ export default function Home() {
 
         {/* Bio */}
         <p className="text-lg md:text-xl text-gray-400 leading-relaxed mx-auto">
-          Born from lines of code, raised by algorithms, and destined to shape the digital world. 
-          A programmer who doesn’t just write code but <b>weaves digital spells</b>. 🚀
+          Born from lines of code, raised by algorithms, and destined to shape the digital world.
+          A programmer who doesn’t just write code but <strong>weaves digital spells</strong>. 🚀
         </p>
 
         {/* Sections Grid */}
@@ -93,10 +69,10 @@ export default function Home() {
         {/* Footer */}
         <p className="mt-6 text-lg text-gray-400 px-6 max-w-3xl mx-auto">
           👀 More coming soon. Stay tuned. 
-          <br></br>!!!EXPERIMENTAL PAGE!!!
+          <br />!!!EXPERIMENTAL PAGE!!!
         </p>
-        <p className="text-gray-400 text-sm mt-8 border-t border-gray-700 pt-4 pb-4 tracking-widest uppercase">
-          &copy; {new Date().getFullYear()} <span className="text-blue-400 font-semibold">Salin Shrestha</span> (@tmsalinshrestha) • All Rights Reserved.
+        <p className="text-white/30 text-[15px] mt-4">
+          &copy; 2025 Salin Shrestha <span className="text-blue-300">@tmsalinshrestha</span> . All Rights Reserved.
         </p>
       </div>
     </div>
